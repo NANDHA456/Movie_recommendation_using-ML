@@ -50,7 +50,7 @@ Enter a movie name when prompted
 Get recommendations: The system will display top 30 similar movies
 
 Example:
-'''text
+```text
 Enter your favourite movie name: The Dark Knight
 Movies suggested for you:
 
@@ -59,27 +59,27 @@ Movies suggested for you:
 3. Watchmen
 4. Man of Steel
 5. Spider-Man
-...'''
+...```
 🔧 Technical Implementation
 Key Components:
 1. Feature Selection & Preprocessing
 
-'''python
-selected_features = ['genres','keywords','tagline','cast','director']'''
+```python
+selected_features = ['genres','keywords','tagline','cast','director']```
 # Combines all features into single text representation
 2. TF-IDF Vectorization''
 
-'''python
+```python
 vectorizer = TfidfVectorizer()
-feature_vectors = vectorizer.fit_transform(combined_features)]'''
+feature_vectors = vectorizer.fit_transform(combined_features)]```
 3. Cosine Similarity Calculation
 
-'''python
-similarity_matrix = cosine_similarity(feature_vectors)'''
+```python
+similarity_matrix = cosine_similarity(feature_vectors)```
 4. Fuzzy String Matching
 
-'''python
-close_matches = difflib.get_close_matches(user_input, movie_titles)'''
+```python
+close_matches = difflib.get_close_matches(user_input, movie_titles)```
 📈 Performance Metrics
 Accuracy: Content-based approach ensures relevant recommendations
 
